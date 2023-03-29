@@ -11,7 +11,7 @@ import Foundation
 
 // This function was copied from somewhere else since generating a guassian number doesn't work in swift.
 func gaussianRandom(mean: Double, standardDeviation: Double) -> Double {
-    var randNormal:Double
+    var randNormal: Double
     repeat {
         let num1 = Double.random(in: 0...1)
         let num2 = Double.random(in: 0...1)
