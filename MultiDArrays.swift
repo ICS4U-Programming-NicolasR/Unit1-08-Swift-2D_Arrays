@@ -32,7 +32,7 @@ func generateStudentMarks(students: [String], assignments: [String]) -> [[String
             // generate the random number
             let randomMark = String(gaussianRandom(mean: meanVal, standardDeviation: standardDeviationVal))
             // Add random mark
-            studentMarks.append(randomMark) 
+            studentMarks.append(randomMark)
         }
         // Add row with marks for student
         marks.append(studentMarks) 
