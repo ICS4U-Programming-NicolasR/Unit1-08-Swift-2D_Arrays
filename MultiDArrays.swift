@@ -24,7 +24,7 @@ func generateStudentMarks(students: [String], assignments: [String]) -> [[String
     let meanVal = 75.0
     let standardDeviationVal = 10.0
     // Add first value
-    marks.append(["Name"] + assignments) 
+    marks.append(["Name"] + assignments)
     // for loop handling the students
     for student in students {
         var studentMarks = [student]
@@ -35,7 +35,7 @@ func generateStudentMarks(students: [String], assignments: [String]) -> [[String
             studentMarks.append(randomMark)
         }
         // Add row with marks for student
-        marks.append(studentMarks) 
+        marks.append(studentMarks)
     }
     return marks
 }
