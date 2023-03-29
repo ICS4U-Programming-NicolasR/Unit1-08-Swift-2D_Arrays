@@ -11,10 +11,13 @@ import Foundation
 
 // This function was copied from somewhere else since generating a guassian number doesn't work in swift.
 func gaussianRandom(mean: Double, standardDeviation: Double) -> Double {
-    let num1 = Double.random(in: 0...1)
-    let num2 = Double.random(in: 0...1)
-    let randStdNormal = sqrt(-2.0 * log(num1)) * sin(2.0 * .pi * num2)
-    let randNormal = mean + standardDeviation * randStdNormal
+    var randNormal:Double
+    repeat {
+        let num1 = Double.random(in: 0...1)
+        let num2 = Double.random(in: 0...1)
+        let randStdNormal = sqrt(-2.0 * log(num1)) * sin(2.0 * .pi * num2)
+        randNormal = mean + standardDeviation * randStdNormal
+    } while randNormal > 100.0 || randNormal < 0.0
     return randNormal
 }
 
